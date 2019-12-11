@@ -98,4 +98,7 @@ theme: melody
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/zx20110729/zx20110729.github.io
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
