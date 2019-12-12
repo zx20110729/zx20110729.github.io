@@ -14,11 +14,11 @@ excerpt: Spring总结
 
 ### 1、ApplicationContext继承图
 
-![](../../img/java/spring/applicatin-context.png)
+![](/gallery/java/spring/applicatin-context.png)
 
 ### 2、BeanFactory继承图
 
-![](../../img/java/spring/bean-factory.png)
+![](/gallery/java/spring/bean-factory.png)
 
 
 
