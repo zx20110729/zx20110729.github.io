@@ -1,6 +1,6 @@
 ---
 title: ClassPathXmlApplicationContext启动过程分析（一）-- 从配置文件加载bean的流程
-date: 2019-12-11 11:52:25
+date: 2019-12-12 11:52:25
 categories:
     - java
     - spring
@@ -9,11 +9,11 @@ excerpt: ClassPathXmlApplicationContext启动过程分析（一）-- 从配置�
 
 ---
 
-### ClassPathXmlApplicationContext启动过程分析（一）-- 从配置文件加载bean的流程
+
+
+# 1、构造函数
 
 ---
-
-#### 1、构造函数
 
 ```java
 public ClassPathXmlApplicationContext(
@@ -31,7 +31,9 @@ public ClassPathXmlApplicationContext(
 
 接下来，就是 refresh()，这里简单说下为什么是 refresh()，而不是 init() 这种名字的方法。因为 ApplicationContext 建立起来以后，其实我们是**可以通过调用 refresh() 这个方法重建**的，refresh() 会将原来的 ApplicationContext 销毁，然后再重新执行一次初始化操作。
 
-#### 2、refresh方法
+# 2、refresh方法
+
+---
 
 ```java
 @Override
@@ -112,7 +114,9 @@ public ClassPathXmlApplicationContext(
 
 下面开始一步步解释refresh执行的各个方法。
 
-#### 3、prepareRefresh方法
+# 3、prepareRefresh方法
+
+---
 
 创建Bean容器前的准备工作。
 
@@ -137,7 +141,9 @@ protected void prepareRefresh() {
 	}
 ```
 
-#### 4、obtainFreshBeanFactory方法
+# 4、obtainFreshBeanFactory方法
+
+---
 
 创建Bean容器，加载并注册Bean。该方法是全文最重要的部分之一，会初始化BeanFactory、加载Bean、注册Bean等等。但是并未初始化Bean，即未生成Bean实例。
 
@@ -198,7 +204,7 @@ protected ConfigurableListableBeanFactory obtainFreshBeanFactory() {
 
 > BeanDefinition 中保存了我们的 Bean 信息，比如这个 Bean 指向的是哪个类、是否是单例的、是否懒加载、这个 Bean 依赖了哪些 Bean 等等。
 
-**BeanDefinition接口定义**
+### **BeanDefinition接口定义**
 
 ```java
 public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
@@ -284,9 +290,9 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 }
 ```
 
+# 5、customizeBeanFactory方法
 
-
-#### 5、customizeBeanFactory方法
+---
 
 该方法用来设置是否允许BeanDefinition覆盖、是否允许循环引用。
 
@@ -309,7 +315,9 @@ BeanDefinition的覆盖指的是在配置文件中使用了相同的id或name。
 
 循环引用：A依赖B，B也依赖A；A依赖B，B依赖C，C依赖A。默认情况下，Spring 允许循环依赖，当然如果你在 A 的构造方法中依赖 B，在 B 的构造方法中依赖 A 是不行的。
 
-#### 6、loadbeanDefinitions方法
+# 6、loadbeanDefinitions方法
+
+---
 
 根据配置，加载各个 Bean，然后放到 BeanFactory 中。
 
@@ -554,7 +562,7 @@ protected void processBeanDefinition(Element ele, BeanDefinitionParserDelegate d
 | initialization method    | bean 属性设置完成后，会调用这个方法                          |
 | destruction method       | bean 销毁后的回调方法                                        |
 
-**把`<bean/>` 解析为BeanDefinition对象**
+### 把`<bean/>` 解析为BeanDefinition对象
 
 `BeanDefinitionParserDelegate.java`
 
@@ -682,7 +690,7 @@ protected void processBeanDefinition(Element ele, BeanDefinitionParserDelegate d
 	}
 ```
 
-**把BeanDefinition对象注册**
+### 把BeanDefinition对象注册
 
 `BeanDefinitionReaderUtils.java`
 
