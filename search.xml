@@ -78,10 +78,10 @@
     
     <entry>
       <title>Spring总结</title>
-      <link href="/java/spring/spring-summary/"/>
-      <url>/java/spring/spring-summary/</url>
+      <link href="/java/spring/spring/"/>
+      <url>/java/spring/spring/</url>
       
-        <content type="html"><![CDATA[<h1 id="一、Spring结构图"><a href="#一、Spring结构图" class="headerlink" title="一、Spring结构图"></a>一、Spring结构图</h1><hr><h3 id="1、ApplicationContext继承图"><a href="#1、ApplicationContext继承图" class="headerlink" title="1、ApplicationContext继承图"></a>1、ApplicationContext继承图</h3><p><img src="../../img/java/spring/applicatin-context.png" alt=""></p><h3 id="2、BeanFactory继承图"><a href="#2、BeanFactory继承图" class="headerlink" title="2、BeanFactory继承图"></a>2、BeanFactory继承图</h3><p><img src="../../img/java/spring/bean-factory.png" alt=""></p><h1 id="二、Spring中特殊类"><a href="#二、Spring中特殊类" class="headerlink" title="二、Spring中特殊类"></a>二、Spring中特殊类</h1><h3 id="1、BeanPostProcessor"><a href="#1、BeanPostProcessor" class="headerlink" title="1、BeanPostProcessor"></a>1、BeanPostProcessor</h3><p>负责在类初始化时，执行一些特定的操作。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="一、Spring结构图"><a href="#一、Spring结构图" class="headerlink" title="一、Spring结构图"></a>一、Spring结构图</h1><hr><h3 id="1、ApplicationContext继承图"><a href="#1、ApplicationContext继承图" class="headerlink" title="1、ApplicationContext继承图"></a>1、ApplicationContext继承图</h3><p><img src="/gallery/java/spring/applicatin-context.png" alt=""></p><h3 id="2、BeanFactory继承图"><a href="#2、BeanFactory继承图" class="headerlink" title="2、BeanFactory继承图"></a>2、BeanFactory继承图</h3><p><img src="/gallery/java/spring/bean-factory.png" alt=""></p><h1 id="二、Spring中特殊类"><a href="#二、Spring中特殊类" class="headerlink" title="二、Spring中特殊类"></a>二、Spring中特殊类</h1><h3 id="1、BeanPostProcessor"><a href="#1、BeanPostProcessor" class="headerlink" title="1、BeanPostProcessor"></a>1、BeanPostProcessor</h3><p>负责在类初始化时，执行一些特定的操作。</p>]]></content>
       
       
       <categories>
