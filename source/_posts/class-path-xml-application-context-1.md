@@ -1,15 +1,17 @@
 ---
-title: ClassPathXmlApplicationContext启动过程分析（一）-- 从配置文件加载bean的流程
-date: 2019-12-12 11:52:25
+title: ClassPathXmlApplicationContext启动过程分析（一）-- Bean容器实例化
+date: 2019-12-12 19:32:25
 categories:
     - java
     - spring
 tags: spring
-excerpt: ClassPathXmlApplicationContext启动过程分析（一）-- 从配置文件加载bean的流程
+excerpt: ClassPathXmlApplicationContext启动过程分析（一）-- Bean容器实例化
 
 ---
 
-
+> 本篇讲把配置文件中的Bean标签解析成容器中的BeanDefinition，并注册到BeanFactory中。
+>
+> 这里的Bean并没有初始化，只是从配置信息中读取出来。
 
 # 1、构造函数
 
@@ -34,6 +36,7 @@ public ClassPathXmlApplicationContext(
 # 2、refresh方法
 
 ---
+`AbstractApplicationContext.java`
 
 ```java
 @Override
@@ -145,7 +148,7 @@ protected void prepareRefresh() {
 
 ---
 
-创建Bean容器，加载并注册Bean。该方法是全文最重要的部分之一，会初始化BeanFactory、加载Bean、注册Bean等等。但是并未初始化Bean，即未生成Bean实例。
+**创建Bean容器**，**加载并注册Bean**。该方法是全文最重要的部分之一，会初始化BeanFactory、加载Bean、注册Bean等等。但是并未初始化Bean，即未生成Bean实例。
 
 `AbstractApplicationContext.java`
 
@@ -290,7 +293,7 @@ public interface BeanDefinition extends AttributeAccessor, BeanMetadataElement {
 }
 ```
 
-# 5、customizeBeanFactory方法
+### 4.1、customizeBeanFactory方法
 
 ---
 
@@ -315,7 +318,7 @@ BeanDefinition的覆盖指的是在配置文件中使用了相同的id或name。
 
 循环引用：A依赖B，B也依赖A；A依赖B，B依赖C，C依赖A。默认情况下，Spring 允许循环依赖，当然如果你在 A 的构造方法中依赖 B，在 B 的构造方法中依赖 A 是不行的。
 
-# 6、loadbeanDefinitions方法
+### 4.2、loadbeanDefinitions方法
 
 ---
 

@@ -10,6 +10,8 @@ excerpt: Spring总结
 
 # 一、Spring结构图
 
+---
+
 ### 1、ApplicationContext继承图
 
 ![](../../img/java/spring/applicatin-context.png)
@@ -17,3 +19,11 @@ excerpt: Spring总结
 ### 2、BeanFactory继承图
 
 ![](../../img/java/spring/bean-factory.png)
+
+
+
+# 二、Spring中特殊类
+
+### 1、BeanPostProcessor
+
+负责在类初始化时，执行一些特定的操作。
