@@ -27,3 +27,5 @@ excerpt: Spring总结
 ### 1、BeanPostProcessor
 
 负责在类初始化时，执行一些特定的操作。
+
+### 2、BeanPostFactoryProcessor
