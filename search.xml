@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>IDEA类注释模板</title>
+      <link href="/idea/settings/idea-code-file-template/"/>
+      <url>/idea/settings/idea-code-file-template/</url>
+      
+        <content type="html"><![CDATA[<h3 id="设置创建类时自动生成注释"><a href="#设置创建类时自动生成注释" class="headerlink" title="设置创建类时自动生成注释"></a>设置创建类时自动生成注释</h3><blockquote><p>File -&gt; Settings -&gt; Editor -&gt; File and Code Templates<br>在页面上Include按钮下选择 File Header文件。</p></blockquote><p>添加如下代码：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@PACKAGE</span>_NAME: $&#123;PACKAGE_NAME&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@NAME</span>: $&#123;NAME&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@USER</span>: $&#123;USER&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DATE</span>: $&#123;DATE&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@TIME</span>: $&#123;TIME&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@YEAR</span>: $&#123;YEAR&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MONTH</span>: $&#123;MONTH&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MONTH</span>_NAME_SHORT: $&#123;MONTH_NAME_SHORT&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MONTH</span>_NAME_FULL: $&#123;MONTH_NAME_FULL&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DAY</span>: $&#123;DAY&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DAY</span>_NAME_SHORT: $&#123;DAY_NAME_SHORT&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DAY</span>_NAME_FULL: $&#123;DAY_NAME_FULL&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@HOUR</span>: $&#123;HOUR&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MINUTE</span>: $&#123;MINUTE&#125;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@PROJECT</span>_NAME: $&#123;PROJECT_NAME&#125;</span></span><br><span class="line"><span class="comment">**/</span></span><br></pre></td></tr></table></figure><p>效果如下：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.zhou;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@PACKAGE</span>_NAME: com.zhou</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@NAME</span>: Demo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@USER</span>: Zhou</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DATE</span>: 2020/3/25</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@TIME</span>: 16:50</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@YEAR</span>: 2020</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MONTH</span>: 3</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MONTH</span>_NAME_SHORT: 三月</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MONTH</span>_NAME_FULL: 三月</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DAY</span>: 25</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DAY</span>_NAME_SHORT: 星期三</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@DAY</span>_NAME_FULL: 星期三</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@HOUR</span>: 16</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@MINUTE</span>: 50</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@PROJECT</span>_NAME: JavaLife</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> idea </category>
+          
+          <category> settings </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> idea </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring-AOP（一）-- AOP简介</title>
       <link href="/java/spring/spring-aop-1/"/>
       <url>/java/spring/spring-aop-1/</url>
@@ -116,7 +143,7 @@
       <link href="/java/spring/spring/"/>
       <url>/java/spring/spring/</url>
       
-        <content type="html"><![CDATA[<h1 id="一、Spring结构图"><a href="#一、Spring结构图" class="headerlink" title="一、Spring结构图"></a>一、Spring结构图</h1><hr><h3 id="1、ApplicationContext继承图"><a href="#1、ApplicationContext继承图" class="headerlink" title="1、ApplicationContext继承图"></a>1、ApplicationContext继承图</h3><p><img src="/gallery/java/spring/applicatin-context.png" alt=""></p><h3 id="2、BeanFactory继承图"><a href="#2、BeanFactory继承图" class="headerlink" title="2、BeanFactory继承图"></a>2、BeanFactory继承图</h3><p><img src="/gallery/java/spring/bean-factory.png" alt=""></p><h1 id="二、Spring中特殊类"><a href="#二、Spring中特殊类" class="headerlink" title="二、Spring中特殊类"></a>二、Spring中特殊类</h1><h3 id="1、BeanPostProcessor"><a href="#1、BeanPostProcessor" class="headerlink" title="1、BeanPostProcessor"></a>1、BeanPostProcessor</h3><p>负责在类初始化时，执行一些特定的操作。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="一、Spring结构图"><a href="#一、Spring结构图" class="headerlink" title="一、Spring结构图"></a>一、Spring结构图</h1><hr><h3 id="1、ApplicationContext继承图"><a href="#1、ApplicationContext继承图" class="headerlink" title="1、ApplicationContext继承图"></a>1、ApplicationContext继承图</h3><p><img src="/gallery/java/spring/applicatin-context.png" alt=""></p><h3 id="2、BeanFactory继承图"><a href="#2、BeanFactory继承图" class="headerlink" title="2、BeanFactory继承图"></a>2、BeanFactory继承图</h3><p><img src="/gallery/java/spring/bean-factory.png" alt=""></p><h1 id="二、Spring中特殊类"><a href="#二、Spring中特殊类" class="headerlink" title="二、Spring中特殊类"></a>二、Spring中特殊类</h1><h3 id="1、BeanPostProcessor"><a href="#1、BeanPostProcessor" class="headerlink" title="1、BeanPostProcessor"></a>1、BeanPostProcessor</h3><p>负责在类初始化时，执行一些特定的操作。</p><h3 id="2、BeanPostFactoryProcessor"><a href="#2、BeanPostFactoryProcessor" class="headerlink" title="2、BeanPostFactoryProcessor"></a>2、BeanPostFactoryProcessor</h3>]]></content>
       
       
       <categories>
