@@ -36,6 +36,8 @@ Windows:
 ```shell
 # 直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下
 [global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+index-url = http://mirrors.aliyun.com/pypi/simple/
+[install]
+trusted-host=mirrors.aliyun.com
 ```
 
