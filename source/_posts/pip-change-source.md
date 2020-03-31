@@ -24,23 +24,22 @@ pip install scrapy -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 2. 永久修改
-Linux:
+	Linux:
+	```shell
+	# 修改 ~/.pip/pip.conf (没有就创建一个)
+	[global]
+	index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+	```
 
-```shell
-# 修改 ~/.pip/pip.conf (没有就创建一个)
-[global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-```
+	Windows:
 
-Windows:
-
-```shell
-# 直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下
-[global]
-index-url = http://mirrors.aliyun.com/pypi/simple/
-[install]
-trusted-host=mirrors.aliyun.com
-```
+	```shell
+	# 直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下
+	[global]
+	index-url = https://mirrors.aliyun.com/pypi/simple/
+	[install]
+	trusted-host=mirrors.aliyun.com
+	```
 
 ---
 
