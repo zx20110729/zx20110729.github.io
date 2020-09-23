@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>java-stream</title>
+      <link href="/uncategorized/java-stream/"/>
+      <url>/uncategorized/java-stream/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Stream-使用"><a href="#Stream-使用" class="headerlink" title="Stream 使用"></a>Stream 使用</h1><h3 id="1-排序"><a href="#1-排序" class="headerlink" title="1. 排序"></a>1. 排序</h3><pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 简单排序 </span></span><br><span class="line">List&lt;Long&gt; ids = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">       ids.add(<span class="number">100L</span>);</span><br><span class="line">       ids.add(<span class="number">50L</span>);</span><br><span class="line">       ids.add(<span class="number">80L</span>);</span><br><span class="line">       ids.add(<span class="number">10L</span>);</span><br><span class="line">       ids.sort(Comparator.comparing(Function.identity()));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 复杂排序</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* class User&#123;</span></span><br><span class="line"><span class="comment">*  long id;</span></span><br><span class="line"><span class="comment">* &#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">List&lt;User&gt; users = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">      users.add(<span class="keyword">new</span> User(<span class="number">100L</span>));</span><br><span class="line">      users.add(<span class="keyword">new</span> User(<span class="number">50L</span>));</span><br><span class="line">      users.add(<span class="keyword">new</span> User(<span class="number">80L</span>));</span><br><span class="line">      users.add(<span class="keyword">new</span> User(<span class="number">10L</span>));</span><br><span class="line">      Ordering&lt;User&gt; ordering = Ordering.from((User a, User b) -&gt; Longs.compare(a.getId(), b.getId()));</span><br><span class="line">      users.sort(ordering);</span><br></pre></td></tr></table></figure></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java8 Collectors.toMap的坑</title>
       <link href="/uncategorized/java8-stream-map-keng/"/>
       <url>/uncategorized/java8-stream-map-keng/</url>
