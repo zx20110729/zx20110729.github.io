@@ -3,9 +3,9 @@ title: Java8 Collectors.toMap的坑
 date: 2020-03-31 13:43:42
 tags: 
 	- Java8
-	- Stream
-	- toMap
-	- Collectors
+categories:
+    - java
+    - stream
 excerpt: Collectors.toMap的Duplicate Key异常
 ---
 
