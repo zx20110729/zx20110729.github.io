@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>Java8 Collectors.toMap的坑</title>
+      <title>Java8 Stream 使用</title>
       <link href="/uncategorized/java-stream/"/>
       <url>/uncategorized/java-stream/</url>
       
@@ -18,9 +18,7 @@
             
             <tag> Stream </tag>
             
-            <tag> toMap </tag>
-            
-            <tag> Collectors </tag>
+            <tag> sorted </tag>
             
         </tags>
       
