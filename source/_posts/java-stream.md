@@ -1,12 +1,11 @@
 ---
-title: Java8 Collectors.toMap的坑
+title: Java8 Stream 使用
 date: 2020-03-31 13:43:42
 tags: 
 	- Java8
 	- Stream
-	- toMap
-	- Collectors
-excerpt: Java Stream 使用
+	- sorted
+excerpt: Java8 Stream 使用
 ---
 
 # Java Stream 使用
