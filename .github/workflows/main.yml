@@ -11,6 +11,8 @@ env:
   GIT_EMAIL: 751945866@qq.com
   DEPLOY_REPO: zx20110729/zx20110729.github.io
   DEPLOY_BRANCH: gh-pages
+  THEME_REPO: zx20110729/hexo-theme-melody
+  THEME_BRANCH: master
       
 jobs:
   build: 
@@ -27,6 +29,13 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: "10.x"
+
+    - name: Checkout theme repo
+      uses: actions/checkout@v2
+      with:
+        repository: ${{ env.THEME_REPO }}
+        ref: ${{ env.THEME_BRANCH }}
+        path: .deploy_git 
 
     - name: Checkout deploy repo
       uses: actions/checkout@v2
