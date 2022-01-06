@@ -6,6 +6,11 @@ on:
   push:
     branches:
       - dev
+env:
+  GIT_USER: gemsnow
+  GIT_EMAIL: 751945866@qq.com
+  DEPLOY_REPO: zx20110729/zx20110729.github.io
+  DEPLOY_BRANCH: gh-pages
       
 jobs:
   build: 
@@ -23,11 +28,12 @@ jobs:
       with:
         node-version: "10.x"
 
-    - name: Deploy
-        uses: zx20110729/zx20110729.github.io
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build
+    - name: Checkout deploy repo
+      uses: actions/checkout@v2
+      with:
+        repository: ${{ env.DEPLOY_REPO }}
+        ref: ${{ env.DEPLOY_BRANCH }}
+        path: .deploy_git
     
     - name: Setup Hexo Dependencies
       run: |

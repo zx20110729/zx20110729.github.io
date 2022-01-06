@@ -14,7 +14,7 @@ timezone: ''
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # url: https://zx20110729.github.io
-url: https://gemsnow.top
+url: https://gemsnow.fun
 root: /
 # permalink: :year/:month/:day/:title/
 permalink: :category/:title/
