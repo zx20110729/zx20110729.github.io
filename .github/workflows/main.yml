@@ -22,6 +22,12 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: "10.x"
+
+    - name: Deploy
+        uses: zx20110729/zx20110729.github.io
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build
     
     - name: Setup Hexo Dependencies
       run: |
